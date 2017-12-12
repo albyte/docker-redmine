@@ -1,0 +1,6 @@
+files/*
+mysql/*
+plugins/*
+themes/*
+.idea/
+!.keep
