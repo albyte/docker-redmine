@@ -1,7 +1,7 @@
 version: '3'
 services:
   redmine:
-    image: redmine
+    image: redmine:3
     ports:
       - 8888:3000
     environment:
@@ -15,7 +15,7 @@ services:
     - ./themes:/usr/src/redmine/public/themes
     restart: always
   redmine-db:
-    image: mysql
+    image: mysql:5.7
     command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
     environment:
       MYSQL_ROOT_PASSWORD: password
